@@ -21,8 +21,18 @@ a{color:var(--blue)}
 header{background:var(--navy)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 header .logo{height:30px;width:auto;display:block}
-header nav{display:flex;gap:22px;font-size:14px}
-header nav a{color:#fff;text-decoration:none;opacity:.85}
+header{position:relative;z-index:40}
+.hdr-right{display:flex;align-items:center;gap:12px}
+.burger{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.5);background:transparent;cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.burger span{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.menu{position:absolute;top:68px;right:24px;width:300px;background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(14,33,96,.22);padding:8px;display:none}
+.menu.open{display:block}
+.menu a{display:block;padding:11px 14px;border-radius:8px;color:var(--navy);text-decoration:none;font-size:15px;font-weight:500}
+.menu a:hover,.menu a:focus-visible{background:var(--card)}
+.menu a.cta{margin-top:6px;background:var(--yellow);text-align:center;font-weight:600}
 .btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:600;text-decoration:none;border-radius:999px;padding:12px 22px;font-size:15px;border:0;cursor:pointer;font-family:inherit}
 .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
 .btn.blue{background:var(--blue);color:#fff}
@@ -162,7 +172,8 @@ footer p b{font-weight:600}
 }
 /* responsive */
 @media (max-width:900px){
-  header nav{display:none}
+  .menu{left:16px;right:16px;width:auto}
+  .hdr-right .btn{padding:10px 16px;font-size:14px}
   .hero-grid,.two,.bars,.band .grid2,.faq{grid-template-columns:1fr;gap:28px}
   .cards,.offer,.cards.cards-2{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -173,7 +184,7 @@ footer p b{font-weight:600}
   section{padding:52px 0}
 }
 @media print{
-  header nav{display:flex!important}
+  .burger,.menu{display:none!important}
   .hero-grid{grid-template-columns:1.2fr 1fr!important;gap:48px!important}
   .two{grid-template-columns:1fr 1.2fr!important;gap:48px!important}
   .bars,.band .grid2,.faq{grid-template-columns:1fr 1fr!important;gap:28px 48px!important}
@@ -272,9 +283,23 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 -2823 1 -2983 -1z"/>
 </g>
 </svg>
-    <nav><a href="#descoperiri">Ce am găsit</a><a href="#ga4">Ce vede GA4</a><a href="#metoda">Metoda</a><a href="#verifica">Scorul căutării</a></nav>
-    <a class="btn" href="#verifica">Află scorul</a>
+    <div class="hdr-right">
+      <a class="btn" href="#verifica">Află scorul tău</a>
+      <button class="burger" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="meniu"><span></span><span></span><span></span></button>
+    </div>
   </div>
+  <nav class="menu" id="meniu" aria-label="Secțiunile paginii">
+    <a href="#de-ce">De ce căutarea</a>
+    <a href="#descoperiri">Ce am găsit</a>
+    <a href="#etape">Pe etape, de la câmp la rezultat</a>
+    <a href="#disponibil-intai">Disponibil întâi</a>
+    <a href="#platforme">Platformele de ecommerce</a>
+    <a href="#ga4">Ce vede GA4</a>
+    <a href="#metoda">Cum am lucrat</a>
+    <a href="#verificare-rapida">Verifică-ți căutarea în 2 minute</a>
+    <a href="#intrebari">Întrebări frecvente</a>
+    <a class="cta" href="#verifica">Află scorul tău</a>
+  </nav>
 </header>
 
 <!-- HERO -->
@@ -304,7 +329,7 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 </div>
 
 <!-- DE CE -->
-<section>
+<section id="de-ce">
   <div class="wrap two">
     <h2>De ce ne-am uitat <span>la căutare</span></h2>
     <div>
@@ -373,7 +398,7 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 </section>
 
 <!-- PE ETAPE -->
-<section>
+<section id="etape">
   <div class="wrap">
     <h2>Pe etape, <span>de la câmp la rezultat</span></h2>
     <p class="sub">Ponderea magazinelor care trec fiecare etapă. Graficele arată ce oferă magazinele, nu ce aleg clienții.</p>
@@ -571,7 +596,7 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 </section>
 
 <!-- SELF CHECK -->
-<section>
+<section id="verificare-rapida">
   <div class="wrap">
     <h2>Verifică-ți căutarea <span>în 2 minute</span></h2>
     <p class="sub">De pe telefonul tău, pe magazinul tău. Fără instrumente.</p>
@@ -635,7 +660,7 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 </section>
 
 <!-- FAQ -->
-<section>
+<section id="intrebari">
   <div class="wrap">
     <h2>Întrebări <span>frecvente</span></h2>
     <div class="faq">
@@ -673,6 +698,17 @@ document.getElementById('form-scor').addEventListener('submit', async function (
   } catch (err) { msg.textContent = 'Nu am putut trimite cererea. Încearcă din nou.'; }
   b.disabled = false;
 });
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.burger'), m=document.getElementById('meniu');
+  if(!b||!m) return;
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+  b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A') set(false);});
+  document.addEventListener('click',function(e){if(!m.contains(e.target)) set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);b.focus();}});
+})();
 </script>
 </body>
 </html>
