@@ -50,6 +50,8 @@ h2 span{color:var(--blue)}
 .two{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
 .two p{margin:0 0 14px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cards.cards-2{grid-template-columns:repeat(2,1fr)}
+.plat-note{font-size:14px;color:var(--grey);margin:20px 0 0;max-width:860px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
 .card.dark{background:var(--navy);color:#fff;border:0}
 .card .n{font-size:44px;font-weight:600;line-height:1;color:var(--blue)}
@@ -162,7 +164,7 @@ footer p b{font-weight:600}
 @media (max-width:900px){
   header nav{display:none}
   .hero-grid,.two,.bars,.band .grid2,.faq{grid-template-columns:1fr;gap:28px}
-  .cards,.offer{grid-template-columns:1fr}
+  .cards,.offer,.cards.cards-2{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stats div:nth-child(2){border-right:0}
   .steps{grid-template-columns:repeat(2,1fr)}
@@ -176,6 +178,7 @@ footer p b{font-weight:600}
   .two{grid-template-columns:1fr 1.2fr!important;gap:48px!important}
   .bars,.band .grid2,.faq{grid-template-columns:1fr 1fr!important;gap:28px 48px!important}
   .cards{grid-template-columns:repeat(3,1fr)!important}
+  .cards.cards-2{grid-template-columns:repeat(2,1fr)!important}
   .offer{grid-template-columns:1.25fr 1fr 1fr!important}
   .stats{grid-template-columns:repeat(4,1fr)!important}
   .stats div{border-right:1px solid rgba(255,255,255,.15)!important}
@@ -473,6 +476,41 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
     </div>
     <p class="flag"><i aria-hidden="true">!</i><span>La un magazin, <b>11 din primele 12 rezultate</b> erau „stoc epuizat”. Singurul produs disponibil era pe locul 12.</span></p>
     <p class="note avail-note">Verificat pe telefon, pe primele 12 rezultate ale unei căutări din fiecare magazin. Stocul se schimbă de la o oră la alta: e o fotografie, nu un verdict. Un produs cu mărimi e disponibil dacă are cel puțin o mărime pe stoc. Produsele marcate epuizat intenționat, într-o campanie anunțată, nu le-am numărat. Livrarea „la comandă” sau „în 2-3 zile” înseamnă disponibil. În scor, criteriul îl trece magazinul care arată stocul în listă și pune epuizatele la final: <b>46 din 90</b> de magazine. Cine nu arată stocul în listă nu trece, cu excepția magazinelor cu mărimi, unde stocul depinde de mărime.</p>
+  </div>
+</section>
+
+<!-- PLATFORME (2026-11-10, pe 113 magazine; sursa: platforme_analiza.py și test Fisher pe fiecare indicator) -->
+<section id="platforme">
+  <div class="wrap">
+    <h2>Platforma contează: <span>ce face bine fiecare</span></h2>
+    <p class="sub">Am grupat magazinele după platforma pe care rulează și am comparat fiecare grup cu restul. Aici sunt doar diferențele care nu țin de întâmplare.</p>
+    <div class="cards cards-2">
+      <div class="card dark">
+        <div class="n">8 din 10</div>
+        <div class="tag">magazine pe platforme românești</div>
+        <h3>arată primul produs în jumătatea de sus a ecranului</h3>
+        <p>Pe celelalte platforme, 4 din 10. Clientul vede produsul fără să deruleze. Am numărat 21 de magazine pe platforme românești de magazin online.</p>
+      </div>
+      <div class="card">
+        <div class="n">9 din 10</div>
+        <div class="tag">magazine pe Magento</div>
+        <h3>îți arată produse cu poză și preț încă din primele litere</h3>
+        <p>În restul magazinelor, 4 din 10. Tot pe Magento, căutarea ajunge în GA4 la toate cele 17 magazine.</p>
+      </div>
+      <div class="card">
+        <div class="n">8 din 10</div>
+        <div class="tag">magazine pe Shopify</div>
+        <h3>găsesc produsul și când greșești o literă</h3>
+        <p>În restul magazinelor, mai puțin de 4 din 10.</p>
+      </div>
+      <div class="card">
+        <div class="n">5 din 7</div>
+        <div class="tag">magazine pe una dintre platformele românești</div>
+        <h3>te întreabă „Ai vrut să spui” când greșești o literă</h3>
+        <p>În restul magazinelor, 1 din 8.</p>
+      </div>
+    </div>
+    <p class="plat-note">Fiecare grup e comparat cu restul magazinelor în care indicatorul s-a putut măsura (test exact Fisher, p sub 0,05). Eșantionul e portofoliul DWF, nu piața. Rezultatul ține și de tema magazinului și de cine l-a configurat, nu doar de platformă: e o asociere, nu o cauză. Nu numim platformele românești, pentru că pe fiecare avem sub 10 magazine.</p>
   </div>
 </section>
 
