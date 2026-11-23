@@ -627,6 +627,8 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
         <form id="form-scor" novalidate>
           <input name="domain" type="text" inputmode="url" autocomplete="url" required placeholder="Adresa magazinului" aria-label="Adresa magazinului">
           <input name="email" type="email" autocomplete="email" required placeholder="Emailul tău de lucru" aria-label="Email">
+          <!-- Câmp capcană anti-spam (23.11.2026): ascuns pentru oameni; dacă e completat, n8n nu pornește testul. -->
+          <input name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <label style="display:flex;gap:8px;align-items:flex-start;font-size:13px;margin:4px 0 8px;line-height:1.4"><input name="consent" type="checkbox" required style="width:auto;margin-top:2px"> <span>Sunt de acord ca DWF să testeze căutarea magazinului și să-mi trimită raportul pe email. Accept și oferte de servicii de la DWF.</span></label>
           <button class="btn" type="submit" style="border:0;cursor:pointer;font:inherit">Află scorul magazinului tău</button>
           <p id="form-scor-msg" role="status" style="font-size:14px;margin:10px 0 0"></p>
@@ -684,8 +686,8 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 </footer>
 
 <script>
-/* Formularul trimite cererea la n8n. Schimbi adresa webhook-ului după import (vezi README, pasul 5). */
-window.SCOR_WEBHOOK = window.SCOR_WEBHOOK || 'https://n8n.dwf.ro/webhook/scorul-cautarii';
+/* Formularul trimite cererea la n8n Cloud (workflow „Scorul cautarii”, 23.11.2026). În test intern, n8n pornește testul doar pentru emailuri DWF. */
+window.SCOR_WEBHOOK = window.SCOR_WEBHOOK || 'https://dwf.app.n8n.cloud/webhook/scorul-cautarii';
 document.getElementById('form-scor').addEventListener('submit', async function (e) {
   e.preventDefault();
   var f = e.target, msg = document.getElementById('form-scor-msg'), b = f.querySelector('button');
@@ -693,7 +695,7 @@ document.getElementById('form-scor').addEventListener('submit', async function (
   b.disabled = true; msg.textContent = 'Trimitem cererea...';
   try {
     var r = await fetch(window.SCOR_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ domain: f.domain.value.trim(), email: f.email.value.trim(), consent: true, page: location.href }) });
+      body: JSON.stringify({ domain: f.domain.value.trim(), email: f.email.value.trim(), consent: true, website: f.website.value, page: location.href }) });
     var d = await r.json().catch(function () { return {}; });
     msg.textContent = r.ok ? (d.mesaj || 'Am primit cererea. Primești raportul pe email.') : (d.eroare || 'Nu am putut trimite cererea. Încearcă din nou.');
     if (r.ok) f.reset();
