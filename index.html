@@ -203,6 +203,161 @@ footer p b{font-weight:600}
   .row{grid-template-columns:150px 1fr 48px!important}
   section{padding:44px 0!important}
 }
+
+/* === schita 24.11: primele trei blocuri === */
+.hero2{background:var(--navy);color:#fff;padding:56px 0 64px}
+.hero2 h1{max-width:900px}
+.hero2-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;margin-top:30px}
+.hero2 .lead{font-size:19px;opacity:.92;font-weight:300;margin:0 0 24px;max-width:540px}
+.hero2 .lead b{font-weight:600;color:#fff}
+.mini-form{display:flex;gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:10px;max-width:540px}
+.mini-form input{flex:1 1 220px;min-width:0;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-size:16px}
+.mini-form .btn{flex:0 0 auto}
+.mini-note{font-size:13px;opacity:.75;margin:10px 0 0}
+.mini-note a{color:#fff}
+.phones{display:flex;gap:22px;justify-content:center}
+.phones figure{margin:0;text-align:center}
+.phones figcaption{font-size:14px;margin-top:10px;opacity:.9}
+.phones figcaption b{display:block;font-size:22px;font-weight:600}
+.phones .zero b{color:#FF6B7A}
+.phones .ok b{color:var(--yellow)}
+.src-note{font-size:12px;opacity:.6;text-align:center;margin-top:12px}
+.ex-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);text-align:center;margin:0 0 10px}
+.examples{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.examples .ex{flex:0 0 auto}
+.hero2 .phones{gap:14px}
+.hero2 .phones svg{width:120px;height:auto}
+.hero2 .phones figcaption{font-size:13px;max-width:130px}
+.hero2 .phones figcaption b{font-size:19px}
+.hero2-grid{grid-template-columns:1fr 1.1fr}
+@media(max-width:860px){.hero2-grid{grid-template-columns:1fr}}
+.ga4{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.ga4 .x{font-size:clamp(80px,12vw,140px);font-weight:600;line-height:.9;color:var(--blue)}
+.ga4 .x small{display:block;font-size:15px;font-weight:400;color:var(--grey);margin-top:12px;line-height:1.4;max-width:230px}
+.ga4-bars{display:grid;gap:14px}
+.ga4-bars .r{display:grid;grid-template-columns:200px 1fr 60px;gap:14px;align-items:center;font-size:15px}
+.ga4-bars .t{height:22px;background:var(--card);border-radius:11px;overflow:hidden}
+.ga4-bars .t i{display:block;height:100%;border-radius:11px;background:var(--line)}
+.ga4-bars .t i.hl{background:var(--blue)}
+.ga4-bars b{text-align:right}
+.ga4 p{margin:18px 0 0;color:var(--grey);font-size:15px;max-width:640px}
+.ga4-tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--navy);color:var(--yellow);border-radius:4px;padding:3px 8px;margin-bottom:14px}
+.path{list-style:none;margin:0;padding:0;position:relative}
+.path:before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.path li{display:grid;grid-template-columns:48px 220px 1fr;gap:22px;align-items:start;padding:18px 0;position:relative}
+.path .dot{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--yellow);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:18px;position:relative;z-index:1}
+.path .moment small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.path .moment b{display:block;font-size:19px;font-weight:500;color:var(--navy);margin-top:4px}
+.path .what .n{font-size:34px;font-weight:600;color:var(--blue);line-height:1}
+.path .what h3{font-size:17px;font-weight:500;margin:6px 0 4px}
+.path .what p{margin:0;font-size:15px;color:var(--grey)}
+.metoda-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 28px}
+.metoda-stats div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.metoda-stats b{display:block;font-size:26px;color:var(--navy)}
+.metoda-stats span{font-size:13px;color:var(--grey)}
+@media(max-width:860px){
+  .hero2-grid,.ga4{grid-template-columns:1fr;gap:32px}
+  .ga4-bars .r{grid-template-columns:1fr 50px}
+  .ga4-bars .r span{grid-column:1/-1}
+  .path li{grid-template-columns:48px 1fr;gap:14px}
+  .path .what{grid-column:2}
+  .metoda-stats{grid-template-columns:repeat(2,1fr)}
+}
+
+/* === hero v2 === */
+.h3ro{background:var(--navy);color:#fff;padding:60px 0 48px}
+.h3ro h1{font-size:clamp(36px,5.6vw,64px);max-width:860px}
+.h3-lead{font-size:19px;font-weight:300;opacity:.85;margin:18px 0 32px;max-width:640px}
+.ex2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.exc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px 30px;display:flex;flex-direction:column}
+.exc-tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:18px}
+.exc .q{display:grid;grid-template-columns:auto auto 1fr;align-items:baseline;gap:14px;margin:4px 0}
+.exc .term{font-size:22px;font-weight:400}
+.exc .arrow{opacity:.5;font-size:22px}
+.exc .q b{font-size:52px;line-height:1.05;font-weight:600}
+.exc .bad{color:#FF6B7A}
+.exc .good{color:var(--yellow)}
+.exc p{margin:16px 0 0;font-size:15px;opacity:.8;font-weight:300}
+.exc small{margin-top:auto;padding-top:16px;font-size:12px;opacity:.55;letter-spacing:.04em}
+.waffle{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin:6px 0 18px}
+.waffle i{aspect-ratio:1;border-radius:5px}
+.waffle .out{border:2px solid #FF6B7A;opacity:.85}
+.waffle .buy{background:var(--yellow)}
+.big12{font-size:19px;line-height:1.35}
+.big12 b{font-size:40px;color:var(--yellow);font-weight:600;display:block;line-height:1.1}
+.h3-form{margin-top:28px;background:var(--yellow);color:var(--navy);border-radius:18px;padding:26px 30px;display:grid;grid-template-columns:1fr auto;gap:14px 32px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.h3-form label{display:block}
+.h3-form label b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:600;line-height:1.15}
+.h3-form label span{display:block;font-size:16px;margin-top:6px;opacity:.85}
+.h3-form .row{display:flex;gap:10px}
+.h3-form input{border:0;border-radius:999px;padding:15px 20px;font:inherit;font-size:17px;min-width:260px;background:#fff}
+.h3-form .btn{background:var(--navy);color:#fff;font-size:17px;padding:15px 28px}
+.h3-form .btn:hover{background:#000}
+.h3ro .src-note{text-align:left;margin-top:14px}
+@media(max-width:860px){
+  .ex2{grid-template-columns:1fr}
+  .h3-form{grid-template-columns:1fr}
+  .h3-form .row{flex-wrap:wrap}
+  .h3-form input{flex:1 1 200px;min-width:0}
+}
+
+/* === hero v3: capturi desenate === */
+.exc.v3{padding:0;overflow:hidden;background:linear-gradient(160deg,#1B3285 0%,#0B1A4D 100%);border:1px solid rgba(255,255,255,.12)}
+.stage{position:relative;height:360px;display:flex;justify-content:center;align-items:flex-end;overflow:hidden;background:radial-gradient(circle at 50% 120%,rgba(230,222,0,.22),transparent 60%)}
+.ph-frame{width:196px;height:400px;background:#0A0A0F;border-radius:34px;padding:8px;box-shadow:0 30px 60px rgba(0,0,0,.45),inset 0 0 0 2px #2A2D36;position:absolute;bottom:-70px}
+.ph-screen{background:#fff;border-radius:27px;height:100%;overflow:hidden;color:#16181D;font-size:11px;position:relative}
+.ph-screen:before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:62px;height:16px;background:#0A0A0F;border-radius:10px}
+.sb{display:flex;justify-content:space-between;padding:8px 18px 4px;font-size:10px;font-weight:600}
+.sb-r i{display:inline-block;width:4px;height:7px;background:#16181D;margin-left:2px;border-radius:1px}
+.sbar{margin:10px 10px 8px;background:#F1F3F7;border-radius:999px;padding:7px 10px;display:flex;align-items:center;gap:6px;font-size:12px}
+.tilt-r{transform:rotate(5deg)} .tilt-l{transform:rotate(-7deg)}
+.front{left:50%;margin-left:-60px;z-index:2}
+.back{left:50%;margin-left:-170px;z-index:1;filter:brightness(.92)}
+.solo{left:50%;margin-left:-98px}
+.empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 12px 0;gap:6px}
+.empty b{font-size:13px}
+.empty span{color:#5B6270}
+.cnt{padding:0 12px 6px;color:#5B6270;font-size:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 10px}
+.tile .img{height:62px;border-radius:8px}
+.tile i{display:block;height:5px;background:#E3E7EE;border-radius:3px;margin-top:5px}
+.tile i.s{width:60%}
+.img.jw{background:radial-gradient(circle at 50% 45%,transparent 16px,#D9B25B 17px,#F3DC94 20px,transparent 22px),linear-gradient(135deg,#F7F3EA,#ECE6D8)}
+.list{padding:0 8px}
+.prow{display:grid;grid-template-columns:38px 1fr auto;gap:7px;align-items:center;padding:6px 4px;border-bottom:1px solid #EEF0F4;opacity:.62}
+.prow.ok{opacity:1;background:#FFFBD1;border-radius:8px;border:0}
+.img.ac{height:30px;border-radius:5px;background:linear-gradient(#FAFBFD,#E6EAF0);box-shadow:inset 0 -6px 0 #D3D9E2}
+.pi i{display:block;height:5px;background:#DDE2EA;border-radius:3px}
+.pi i.s{width:55%;margin-top:4px}
+.badge{display:inline-block;margin-top:4px;font-style:normal;font-size:8px;font-weight:600;color:#fff;background:#D7263D;border-radius:4px;padding:1px 5px}
+.badge.ok{background:#1E9E5A}
+.btn-off{font-size:8px;color:#9AA1AE;border:1px solid #D7DCE4;border-radius:999px;padding:3px 6px}
+.btn-on{font-size:8px;font-weight:600;color:#0E2160;background:#E6DE00;border-radius:999px;padding:4px 7px}
+.more{font-size:9px;color:#D7263D;text-align:center;padding:6px 0;font-weight:600}
+.chip{position:absolute;z-index:3;font-weight:600;border-radius:999px;padding:8px 14px;box-shadow:0 10px 24px rgba(0,0,0,.35);white-space:nowrap}
+.chip.red{background:#D7263D;color:#fff;font-size:20px}
+.chip.yel{background:var(--yellow);color:var(--navy);font-size:18px}
+.c1{right:7%;top:120px;transform:rotate(4deg)}
+.c2{left:6%;top:38px;transform:rotate(-5deg)}
+.c3{left:50%;top:26px;transform:translateX(-50%) rotate(-2deg);font-size:16px}
+.exc-txt{padding:22px 26px 24px}
+.exc-txt h3{font-size:22px;font-weight:600;margin:0;line-height:1.25;color:#fff}
+.exc-txt p{margin:10px 0 0;font-size:15px;opacity:.8;font-weight:300}
+.exc-txt small{display:block;margin-top:14px;font-size:12px;opacity:.55}
+.exc-txt .exc-tag{margin-bottom:10px}
+@media(max-width:480px){.stage{height:330px}.c1{right:2%}.c2{left:2%}.c3{font-size:14px;white-space:normal;width:80%;text-align:center}}
+.solo{bottom:-8px}
+.c3{top:auto;left:auto;bottom:58px;right:4%;transform:rotate(-4deg);white-space:normal;width:170px;text-align:center;line-height:1.2;font-size:16px}
+@media(max-width:480px){.c3{right:1%;width:130px;font-size:14px}}
+.badge{white-space:nowrap}
+.prow{grid-template-columns:34px 1fr}
+.prow .btn-off{display:none}
+.prow.ok{grid-template-columns:34px 1fr;margin-top:2px}
+.prow.ok .btn-on{grid-column:1/-1;text-align:center;margin-top:5px;font-size:10px;padding:6px}
+.more{font-size:10px;padding:8px 0}
+.img.jw{background:linear-gradient(135deg,#F7F3EA,#ECE6D8);display:flex;align-items:center;justify-content:center;padding:4px}
+.path .nrow{display:flex;align-items:center;gap:14px}
+.path .what .n{font-size:40px}
 </style>
 </head>
 <body>
@@ -291,8 +446,8 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
     </div>
   </div>
   <nav class="menu" id="meniu" aria-label="Secțiunile paginii">
-    <a href="#de-ce">De ce căutarea</a>
-    <a href="#descoperiri">Ce am găsit</a>
+    <a href="#de-ce">Cine caută cumpără de 5,1 ori mai des</a>
+    <a href="#descoperiri">Unde se oprește clientul</a>
     <a href="#etape">Pe etape, de la câmp la rezultat</a>
     <a href="#disponibil-intai">Disponibil întâi</a>
     <a href="#platforme">Platformele de ecommerce</a>
@@ -304,98 +459,108 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
   </nav>
 </header>
 
-<!-- HERO -->
-<div class="hero">
+
+<!-- HERO, schita -->
+<div class="h3ro">
   <div class="wrap">
-    <div class="eyebrow">Studiu DWF · 114 magazine, noiembrie 2026</div>
-    <h1>Scorul căutării pe mobil <span>în magazinele online din România</span></h1>
-    <div class="hero-grid">
-      <div>
-        <p class="lead">Am căutat pe mobil, ca un client obișnuit, în 114 magazine online. Am notat ce găsește clientul când tastează, ce se întâmplă când greșește o literă și ce vede GA4 din toate astea.</p>
-        <a class="btn" href="#descoperiri">Vezi ce am găsit</a>
-        <a class="btn ghost" href="#verifica" style="margin:8px 0 0 4px">Află scorul magazinului tău</a>
-      </div>
-      <div class="big">
-        <div class="n">92%</div>
-        <p>dintre magazine nu te duc la politica de retur când cauți „retur”</p>
-        <p style="font-size:13px;opacity:.7;margin-top:6px">100 din 109 magazine, în studiu</p>
-      </div>
-    </div>
-    <div class="stats">
-      <div><b>114</b><span>magazine în studiu</span></div>
-      <div><b>20</b><span>indicatori, în 6 etape</span></div>
-      <div><b>2.073</b><span>capturi păstrate ca dovadă</span></div>
-      <div><b>1.004</b><span>căutări făcute pe telefon</span></div>
+    <div class="eyebrow">Studiu DWF · noiembrie 2026 · căutarea pe mobil</div>
+    <h1>Clientul știe ce vrea. <span>Căutarea îl pierde.</span></h1>
+    <p class="h3-lead">Am testat căutarea pe telefon în 114 magazine online din România. Două exemple din studiu:</p>
+
+    <div class="ex2">
+      <article class="exc v3">
+        <div class="stage">
+          <div class="ph-frame tilt-l back">
+  <div class="ph-screen"><div class="sb"><span>9:41</span><span class="sb-r"><i></i><i></i><i></i></span></div><div class="sbar"><svg viewBox="0 0 20 20" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="#5B6270" stroke-width="2"/><line x1="12.5" y1="12.5" x2="18" y2="18" stroke="#5B6270" stroke-width="2" stroke-linecap="round"/></svg><span>lantisor</span></div>
+    <div class="cnt">1.209 produse</div>
+    <div class="grid"><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div><div class="tile"><div class="img jw"><svg viewBox="0 0 80 62" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M14 8 Q14 40 40 44 Q66 40 66 8" fill="none" stroke="#C9A04A" stroke-width="2.2" stroke-dasharray="2.2 1.6" stroke-linecap="round"/><path d="M40 43 l0 3" stroke="#C9A04A" stroke-width="1.6"/><path d="M40 46 C34 52 35 58 40 59 C45 58 46 52 40 46 Z" fill="#E9C873" stroke="#B88A2E" stroke-width="1.2"/><circle cx="38.5" cy="53" r="1.3" fill="#FFF6D6"/></svg></div><i></i><i class="s"></i></div></div>
+  </div>
+</div>
+          <div class="ph-frame tilt-r front">
+  <div class="ph-screen"><div class="sb"><span>9:41</span><span class="sb-r"><i></i><i></i><i></i></span></div><div class="sbar"><svg viewBox="0 0 20 20" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="#5B6270" stroke-width="2"/><line x1="12.5" y1="12.5" x2="18" y2="18" stroke="#5B6270" stroke-width="2" stroke-linecap="round"/></svg><span>lănțișor</span></div>
+    <div class="empty">
+      <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="34" cy="34" r="22" fill="none" stroke="#C9CFDA" stroke-width="5"/><line x1="50" y1="50" x2="68" y2="68" stroke="#C9CFDA" stroke-width="6" stroke-linecap="round"/><line x1="26" y1="26" x2="42" y2="42" stroke="#D7263D" stroke-width="4" stroke-linecap="round"/><line x1="42" y1="26" x2="26" y2="42" stroke="#D7263D" stroke-width="4" stroke-linecap="round"/></svg>
+      <b>Nu am găsit produse</b>
+      <span>pentru „lănțișor”</span>
     </div>
   </div>
 </div>
+          <div class="chip red c1">0 rezultate</div>
+          <div class="chip yel c2">1.209 produse</div>
+        </div>
+        <div class="exc-txt">
+          <div class="exc-tag">Diacriticele</div>
+          <h3>„lănțișor” → 0. „lantisor” → 1.209.</h3>
+          <p>Aceeași căutare, fără diacritice, găsește tot. Cu diacritice, nimic.</p>
+          <small>Magazin de bijuterii</small>
+        </div>
+      </article>
+      <article class="exc v3">
+        <div class="stage">
+          <div class="ph-frame tilt-r front solo">
+  <div class="ph-screen"><div class="sb"><span>9:41</span><span class="sb-r"><i></i><i></i><i></i></span></div><div class="sbar"><svg viewBox="0 0 20 20" width="14" height="14"><circle cx="8" cy="8" r="6" fill="none" stroke="#5B6270" stroke-width="2"/><line x1="12.5" y1="12.5" x2="18" y2="18" stroke="#5B6270" stroke-width="2" stroke-linecap="round"/></svg><span>aere condiționate</span></div>
+    <div class="list"><div class="prow"><div class="img ac"></div><div class="pi"><i></i><i class="s"></i><em class="badge">Stoc epuizat</em></div><span class="btn-off">Indisponibil</span></div><div class="prow"><div class="img ac"></div><div class="pi"><i></i><i class="s"></i><em class="badge">Stoc epuizat</em></div><span class="btn-off">Indisponibil</span></div><div class="prow"><div class="img ac"></div><div class="pi"><i></i><i class="s"></i><em class="badge">Stoc epuizat</em></div><span class="btn-off">Indisponibil</span></div>
+      <div class="more">↓ până la locul 15: alte 10 epuizate, un accesoriu, un serviciu</div>
+      <div class="prow ok"><div class="img ac"></div><div class="pi"><i></i><i class="s"></i><em class="badge ok">În stoc</em></div><span class="btn-on">Adaugă în coș</span></div>
+    </div>
+  </div>
+</div>
+          <div class="chip yel c3">Locul 16: primul aer condiționat pe care îl poți cumpăra</div>
+        </div>
+        <div class="exc-txt">
+          <div class="exc-tag">Stocul</div>
+          <h3>Primele 15 rezultate: niciun aer condiționat în stoc.</h3>
+          <p>La „aere condiționate”, 13 din primele 15 rezultate au „Stoc epuizat”. Celelalte două sunt un accesoriu și un serviciu de instalare. Primul aer condiționat pe care îl poți cumpăra e pe locul 16. Clientul venise să cumpere.</p>
+          <small>Magazin de climatizare</small>
+        </div>
+      </article>
+    </div>
 
-<!-- DE CE -->
+    <form class="h3-form" onsubmit="event.preventDefault();var f=document.getElementById('form-scor');f.domain.value=document.getElementById('h3-dom').value.trim();document.getElementById('verifica').scrollIntoView({behavior:'smooth'});setTimeout(function(){(f.domain.value?f.email:f.domain).focus({preventScroll:true});},600);">
+      <label for="h3-dom"><b>Cum stă căutarea în magazinul tău?</b><span>Primești gratuit scorul, cu capturi și locul tău față de piață.</span></label>
+      <div class="row"><input id="h3-dom" type="text" placeholder="magazinul-tau.ro"><button class="btn" type="submit">Află scorul</button></div>
+    </form>
+    <p class="src-note">Exemple din studiu, verificate din nou pe 24.11.2026.</p>
+  </div>
+</div>
+
+<!-- GA4, schita (in locul lui „De ce ne-am uitat”) -->
 <section id="de-ce">
-  <div class="wrap two">
-    <h2>De ce ne-am uitat <span>la căutare</span></h2>
-    <div>
-      <p>Clientul care caută știe deja ce vrea. Tastează numele produsului și așteaptă să-l vadă.</p>
-      <p>În magazinele pe care le măsurăm, cine caută pe mobil cumpără de <b>5,1 ori</b> mai des decât cine nu caută. E mediana pe 80 de magazine, de cel puțin 2 ori la 77 dintre ele. Sursa: GA4, 80 de magazine din portofoliul DWF, 7 octombrie – 5 noiembrie 2026. E corelație, nu cauză: cine caută are deja intenția.</p>
-      <p>Și caută puțini: la magazinul tipic, <b>5,1%</b> dintre utilizatorii de pe mobil. Sunt puțini, dar sunt cei mai aproape de comandă.</p>
-      <p>Tocmai de aceea, o căutare care dă zero rezultate pierde cel mai valoros vizitator. Problema nu e traficul. E ce găsește clientul după ce tastează.</p>
-      <p>La <b>4 magazine</b>, clientul de pe telefon nici nu are unde să tasteze. Căutarea există doar pe desktop.</p>
+  <div class="wrap">
+    <span class="ga4-tag">Din GA4, nu din browser</span>
+    <h2>Cine caută pe mobil <span>cumpără de 5,1 ori mai des</span></h2>
+    <div class="ga4">
+      <div class="x">5,1×<small>mediana pe 80 de magazine din portofoliul DWF</small></div>
+      <div>
+        <div class="ga4-bars">
+          <div class="r"><span>Utilizatori care caută</span><div class="t"><i class="hl" style="width:100%"></i></div><b>5,1</b></div>
+          <div class="r"><span>Utilizatori care nu caută</span><div class="t"><i style="width:19.6%"></i></div><b>1</b></div>
+        </div>
+        <p>Rata de cumpărare pe mobil, raportată la cei care nu caută. De cel puțin 2 ori la 77 din 80 de magazine. Caută doar <b>5,1%</b> dintre utilizatorii de pe mobil: puțini, dar cei mai aproape de comandă. Sursa: GA4, 7 octombrie – 5 noiembrie 2026. E corelație, nu cauză: cine caută are deja intenția.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- DESCOPERIRI -->
+<!-- DRUMUL CLIENTULUI, schita (in locul grilei „Ce am găsit”) -->
 <section class="alt" id="descoperiri">
   <div class="wrap">
-    <h2>Ce am găsit <span>în căutare</span></h2>
-    <p class="sub">Ce vede clientul pe telefon, de la câmpul de căutare până la pagina de rezultate.</p>
-    <div class="cards">
-      <div class="card dark">
-        <div class="n">100 din 109</div>
-        <div class="tag">când cauți „retur”</div>
-        <h3>nu te duc la politica de retur</h3>
-        <p>Primești produse sau zero rezultate. Clientul care caută informații nu e mai puțin hotărât să cumpere. Vrea doar un răspuns.</p>
-      </div>
-      <div class="card dark">
-        <div class="n">64%</div>
-        <div class="tag">la căutarea fără rezultat</div>
-        <h3>te lasă pe un ecran gol</h3>
-        <p>Fără sugestii, fără produse, fără contact. Doar 15 din 100 oferă și produse populare, și un telefon, WhatsApp sau chat.</p>
-      </div>
-      <div class="card dark">
-        <div class="n">89%</div>
-        <div class="tag">când atingi câmpul de căutare</div>
-        <h3>nu-ți arată nimic până nu tastezi</h3>
-        <p>Fără căutări populare și fără categorii. Clientul pornește de la zero, pe o tastatură mică.</p>
-      </div>
-      <div class="card">
-        <div style="display:flex;align-items:center;gap:14px">
-          <svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><line x1="3" y1="14" x2="31" y2="14" stroke="#0E2160" stroke-width="1.2"/><circle cx="24" cy="7" r="3" fill="none" stroke="#0A62FF" stroke-width="1.8"/><line x1="26.2" y1="9.2" x2="28.5" y2="11.5" stroke="#0A62FF" stroke-width="1.8" stroke-linecap="round"/><rect x="5" y="18" width="24" height="7" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2" stroke-dasharray="2 2" opacity=".5"/></svg>
-          <div class="n">55%</div>
-        </div>
-        <div class="tag">pe homepage, pe mobil</div>
-        <h3>ascund căutarea după o lupă sau în meniu</h3>
-        <p>Un câmp deschis în header cere un singur tap. O lupă sau un meniu cer două sau trei.</p>
-      </div>
-      <div class="card">
-        <div style="display:flex;align-items:center;gap:14px">
-          <svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="3" y="33" width="28" height="28" rx="2" fill="#0A62FF" opacity=".85"/><line x1="3" y1="32" x2="31" y2="32" stroke="#0E2160" stroke-width="1.5" stroke-dasharray="3 2"/></svg>
-          <div class="n">Jumătate</div>
-        </div>
-        <div class="tag">din ecran, la magazinul tipic</div>
-        <h3>trece până vezi primul produs căutat</h3>
-        <p>Cauți ceva și primul produs apare abia la mijlocul ecranului. Sus sunt reclame, filtre și text. La 11 din 109 magazine, produsul apare aproape jos, în colț.</p>
-      </div>
-      <div class="card">
-        <div style="display:flex;align-items:center;gap:14px">
-          <svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="5" y="7" width="24" height="9" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2"/><text x="17" y="14" text-anchor="middle" font-size="7" font-family="sans-serif" fill="#0E2160">b<tspan fill="#0A62FF" font-weight="700">ra</tspan>t</text><text x="17" y="44" text-anchor="middle" font-size="18" font-weight="700" font-family="sans-serif" fill="#0A62FF">0</text></svg>
-          <div class="n">58 din 108</div>
-        </div>
-        <div class="tag">la o singură literă greșită</div>
-        <h3>nu mai arată niciun produs</h3>
-        <p>Două litere inversate, ca pe o tastatură mică, și căutarea se oprește.</p>
-      </div>
-    </div>
+    <h2>Unde se oprește clientul <span>care știe ce vrea</span></h2>
+    <p class="sub">Șase momente din drumul prin căutare, pe telefon. La fiecare, cât de des se întâmplă în magazinele din studiu.</p>
+    <ol class="path">
+      <li><div class="dot">1</div><div class="moment"><small>Pe homepage</small><b>Caută câmpul</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><line x1="3" y1="14" x2="31" y2="14" stroke="#0E2160" stroke-width="1.2"/><circle cx="24" cy="7" r="3" fill="none" stroke="#0A62FF" stroke-width="1.8"/><line x1="26.2" y1="9.2" x2="28.5" y2="11.5" stroke="#0A62FF" stroke-width="1.8" stroke-linecap="round"/><rect x="5" y="18" width="24" height="7" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2" stroke-dasharray="2 2" opacity=".5"/></svg><div class="n">55%</div></div><h3>ascund căutarea după o lupă sau în meniu</h3><p>Un câmp deschis în header cere un tap. O lupă sau un meniu cer două sau trei. La 4 magazine, pe telefon nu există deloc căutare.</p></div></li>
+      <li><div class="dot">2</div><div class="moment"><small>Înainte să tasteze</small><b>Atinge câmpul</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="5" y="8" width="24" height="7" rx="2" fill="none" stroke="#0A62FF" stroke-width="1.6"/><circle cx="17" cy="11.5" r="5" fill="#0A62FF" opacity=".18"/><rect x="5" y="20" width="24" height="36" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2" stroke-dasharray="2 2" opacity=".45"/></svg><div class="n">89%</div></div><h3>nu-i arată nimic până nu tastează</h3><p>Fără căutări populare și fără categorii. Pornește de la zero, pe o tastatură mică.</p></div></li>
+      <li><div class="dot">3</div><div class="moment"><small>Pe tastatura mică</small><b>Greșește o literă</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="5" y="7" width="24" height="9" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2"/><text x="17" y="14" text-anchor="middle" font-size="7" font-family="sans-serif" fill="#0E2160">b<tspan fill="#0A62FF" font-weight="700">ra</tspan>t</text><text x="17" y="44" text-anchor="middle" font-size="18" font-weight="700" font-family="sans-serif" fill="#0A62FF">0</text></svg><div class="n">58 din 108</div></div><h3>nu mai arată niciun produs</h3><p>Două litere inversate și căutarea se oprește.</p></div></li>
+      <li><div class="dot">4</div><div class="moment"><small>Când nu există rezultat</small><b>Dă de zero</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="5" y="8" width="24" height="7" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2"/><rect x="5" y="20" width="24" height="36" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2" stroke-dasharray="2 2" opacity=".45"/><text x="17" y="43" text-anchor="middle" font-size="14" font-weight="700" font-family="sans-serif" fill="#0A62FF">?</text></svg><div class="n">64%</div></div><h3>îl lasă pe un ecran gol</h3><p>Fără sugestii, fără produse, fără contact. Doar 15 din 100 oferă și produse populare, și un telefon, WhatsApp sau chat.</p></div></li>
+      <li><div class="dot">5</div><div class="moment"><small>Pe pagina de rezultate</small><b>Caută primul produs</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="3" y="33" width="28" height="28" rx="2" fill="#0A62FF" opacity=".85"/><line x1="3" y1="32" x2="31" y2="32" stroke="#0E2160" stroke-width="1.5" stroke-dasharray="3 2"/></svg><div class="n">Jumătate</div></div><h3>din ecran trece până la primul produs</h3><p>La magazinul tipic, sus sunt reclame, filtre și text. La 11 din 109, produsul apare aproape jos, în colț.</p></div></li>
+      <li><div class="dot">6</div><div class="moment"><small>După comandă</small><b>Caută „retur”</b></div>
+        <div class="what"><div class="nrow"><svg width="34" height="64" viewBox="0 0 34 64" aria-hidden="true" style="flex:0 0 auto"><rect x="1" y="1" width="32" height="62" rx="6" fill="none" stroke="#0E2160" stroke-width="2"/><rect x="5" y="8" width="24" height="7" rx="2" fill="none" stroke="#0E2160" stroke-width="1.2"/><text x="17" y="14" text-anchor="middle" font-size="5.5" font-family="sans-serif" fill="#0E2160">retur</text><line x1="11" y1="30" x2="23" y2="42" stroke="#0A62FF" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="30" x2="11" y2="42" stroke="#0A62FF" stroke-width="2.2" stroke-linecap="round"/></svg><div class="n">100 din 109</div></div><h3>nu-l duc la politica de retur</h3><p>Primește produse sau zero rezultate. Vrea doar un răspuns.</p></div></li>
+    </ol>
   </div>
 </section>
 
@@ -582,7 +747,8 @@ c8 -15 28 -33 45 -40 l31 -13 107 6 c173 11 529 83 648 132 33 14 68 25 80 25
 <!-- METODA -->
 <section class="alt" id="metoda">
   <div class="wrap">
-    <h2>Cum am parcurs <span>fiecare magazin</span></h2>
+    <h2>Metoda: <span>același telefon, aceiași pași, în fiecare magazin</span></h2>
+    <div class="metoda-stats"><div><b>114</b><span>magazine</span></div><div><b>20</b><span>indicatori, în 6 etape</span></div><div><b>2.073</b><span>capturi, ca dovadă</span></div><div><b>1.004</b><span>căutări pe telefon</span></div></div>
     <p class="sub">Pe telefon emulat, 375 × 812, aceleași 6 etape în fiecare magazin. Termenul de test e numele unei categorii din meniul magazinului, nu un cuvânt ales de noi.</p>
     <div class="steps">
       <div class="step"><small>Etapa 1</small><b>Găsești căutarea</b><p>Câmp deschis, tasta „Caută”, sugestii la tap.</p></div>
